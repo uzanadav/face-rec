@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Particles from 'react-particles-js';
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
@@ -11,59 +10,6 @@ import Rank from './components/Rank/Rank';
 import './App.css';
 
 
-
-const ParticlesOptions = {
-      "particles": {
-          "number": {
-              "value": 160,
-              "density": {
-              "enable": true,
-              value_ares:800
-              }
-          },
-          "size": {
-              "value": 3,
-              "random": true,
-              "anim": {
-                  "speed": 4,
-                  "size_min": 0.3
-              }
-          },
-          "line_linked": {
-              "enable": false
-          },
-          "move": {
-              "random": true,
-              "speed": 1,
-              "direction": "top",
-              "out_mode": "out"
-          }
-      },
-      "interactivity": {
-          "events": {
-              "onhover": {
-                  "enable": true,
-                  "mode": "bubble"
-              },
-              "onclick": {
-                  "enable": true,
-                  "mode": "repulse"
-              }
-          },
-          "modes": {
-              "bubble": {
-                  "distance": 250,
-                  "duration": 2,
-                  "size": 0,
-                  "opacity": 0
-              },
-              "repulse": {
-                  "distance": 400,
-                  "duration": 4
-              }
-          }
-      }
-}
 
 const initalState ={
       input:'',
@@ -175,9 +121,7 @@ class App extends Component {
    const  { isSignedIn, imageUrl, route, box }=this.state;
     return (
       <div className="App">
-      <Particles className='particles'
-      params={ParticlesOptions} 
-      />
+      <div className='particles'/>
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
         { route==='home'
         ? <div>
